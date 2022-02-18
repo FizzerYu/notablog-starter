@@ -23,12 +23,11 @@ jobs:
         uses: actions/checkout@v2
       # 1、生成静态文件
       - name: Build
-        run: npm i -g notablog && notablog generate .
+        run: npm i -g notablog && notablog generate . && cat ./
       # 2、部署到 GitHub Pages
       - name: Deploy
         uses: actions/checkout@v2
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: FizzerYu/FizzerYu.github.io
           BRANCH: master
           FOLDER: public

@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Github Pages
 
 # Controls when the workflow will run
 on:
@@ -21,8 +21,6 @@ jobs:
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
       # 1、生成静态文件
       - name: Build
         run: npm i -g notablog && notablog generate .

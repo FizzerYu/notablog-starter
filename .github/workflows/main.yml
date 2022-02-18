@@ -28,6 +28,7 @@ jobs:
       - name: Deploy
         uses: actions/checkout@v2
         with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: FizzerYu/FizzerYu.github.io
           BRANCH: master
           FOLDER: public
